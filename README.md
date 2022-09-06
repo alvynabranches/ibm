@@ -20,7 +20,7 @@ The solution must run on Cloud ( IBM Cloud or other)
 
 2. To implement the CI / CD, I have used github workflows.
     - Workflows are free hence I went with this option. 
-    - The [file](.github/workflows/deployment.yaml) is a end to end workflows for deployment of the flask app on to GKE. 
+    - The [deployment.yaml](.github/workflows/deployment.yaml) is a end to end workflows for deployment of the flask app on to GKE. 
 
 3. To automate the creation of infrastructure I have used terraform. 
     - The [provider.tf](./terraform/1-provider.tf) provides all instructions to create the provider.
