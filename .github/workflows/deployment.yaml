@@ -9,7 +9,7 @@ env:
   ENV: prod
   GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}
-  GKE_ZONE: ${{ GKE_ZONE }}
+  GKE_ZONE: ${{ secrets.GKE_ZONE }}
   DEPLOYMENT_NAME: "api-prod-deployment"
   IMAGE: ibm
   TAG: latest
