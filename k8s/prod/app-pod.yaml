@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
     - name: app-deploy
-      image: gcr.io/gpt-j-and-gpt-neox20b/app-deploy
+      image: gcr.io/gpt-j-and-gpt-neox20b/ibm
       ports:
         - containerPort: 5000
