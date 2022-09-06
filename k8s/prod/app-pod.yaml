@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-deploy-pod
+  labels:
+    name: app-deploy
+    app: app-deploy
+
+spec:
+  containers:
+    - name: app-deploy
+      image: gcr.io/gpt-j-and-gpt-neox20b/app-deploy
+      ports:
+        - containerPort: 5000
