@@ -10,6 +10,7 @@ env:
   GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}
   GKE_ZONE: ${{ secrets.GKE_ZONE }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
   DEPLOYMENT_NAME: "api-prod-deployment"
   IMAGE: ibm
   TAG: latest
@@ -79,3 +80,11 @@ jobs:
         # kubectl apply -f "k8s/$ENV/app-pod.yaml"
         # kubectl apply -f "k8s/$ENV/app-service.yaml"
         kubectl apply -f "k8s/$ENV/deployment.yaml"
+
+    - name: Slack Notification
+      uses: act10ns/slack@v1
+      with:
+        status: ${{ job.status }}
+        steps: ${{ toJson(steps) }}
+        channel: "#cicd"
+      if: always()
