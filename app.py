@@ -55,5 +55,8 @@ def create():
 
 
 if __name__ == '__main__':
-    app.run(os.environ.get("HOST", "0.0.0.0"), os.environ.get("PORT", 5000), False if str(os.environ.get("DEBUG")).lower() == "false" else True)
+    app.run(
+        os.environ.get("HOST", "0.0.0.0"), 
+        os.environ.get("PORT", 5000), False if str(os.environ.get("DEBUG")).lower() == "false" else True
+    )
     
