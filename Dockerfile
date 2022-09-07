@@ -17,4 +17,5 @@ ENV HOST=${HOST}
 ENV PORT=${PORT}
 ENV DEBUG=${DEBUG}
 
-CMD [ "python3", "app.py" ]
+# CMD [ "python3", "app.py" ]
+CMD [ "gunicorn", "--workers", "2", "--threads", "2", "--bind", "0.0.0.0:${PORT}", "app:app" ]
