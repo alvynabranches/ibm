@@ -76,5 +76,6 @@ jobs:
 
     - name: Publish GKE
       run: |
-        kubectl apply -f "k8s/$ENV/app-pod.yaml"
-        kubectl apply -f "k8s/$ENV/app-service.yaml"
+        # kubectl apply -f "k8s/$ENV/app-pod.yaml"
+        # kubectl apply -f "k8s/$ENV/app-service.yaml"
+        kubectl apply -f "k8s/$ENV/deployment.yaml"
