@@ -31,5 +31,6 @@ The solution must run on Cloud ( IBM Cloud or other)
     - The [firewalls.tf](./terraform/6-firewall.tf) provides all instructions to create the firewalls.
     - The [kubernetes.tf](./terraform/7-kubernetes.tf) provides all instructions to create the Kubernetes cluster.
     - The [node-pools.tf](./terraform/8-node-pools.tf) provides all instructions to create the node pools.
+    - The [service-accounts.tf](./terraform/9-service-account.tf) file provides instructions to create a service account on the mentioned project. 
 
     - *To run the terraform files, it is first required that the device is logged in with GCP authentication. Commands found in this [file](./cmd.sh)*
