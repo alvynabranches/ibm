@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: prod
+
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: app-deployment
+  template:
+    metadata:
+      labels:
+        app: app-deployment
+
+    spec:
+      containers:
+        - name: app-deployment-container
+          image: gcr.io/gpt-j-and-gpt-neox20b/ibm
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
